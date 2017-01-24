@@ -10,7 +10,7 @@ namespace cis237inclass1
     {
         static void Main(string[] args)
         {
-            UserInterface ui = new UserInterface();
+            //UserInterface ui = new UserInterface();
 
             Employee myEmployee = new Employee();
 
@@ -22,7 +22,7 @@ namespace cis237inclass1
 
             csvProccesor.ImportCSV(pathToCsv, employees);
 
-            int choice = ui.GetUserInput();
+            int choice = StaticUserInterface.GetUserInput();
 
             while (choice != 2)
             {
@@ -39,10 +39,10 @@ namespace cis237inclass1
                     }
 
                     // Use the UI class to print put the string
-                    ui.Output(outputString);
+                    StaticUserInterface.Output(outputString);
                 }
 
-                choice = ui.GetUserInput();
+                choice = StaticUserInterface.GetUserInput();
             }
         }
     }
